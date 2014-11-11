@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pieza: MyString
+  Disponible: 1
+  Usada: 1
+  Entrada: 1
+
+two:
+  pieza: MyString
+  Disponible: 1
+  Usada: 1
+  Entrada: 1

@@ -1,0 +1,45 @@
+<%= form_for @cliente, :html => { :class => "form-horizontal cliente" } do |f| %>
+
+    <% if @cliente.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @cliente.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombre, :class => 'form-control' %>
+    </div>
+    <%= error_span(@cliente[:nombre]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :ciudad, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ciudad, :class => 'form-control' %>
+    </div>
+    <%= error_span(@cliente[:ciudad]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :telefono, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :telefono, :class => 'form-control' %>
+    </div>
+    <%= error_span(@cliente[:telefono]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            clientes_path, :class => 'btn btn-default' %>
+
+<% end %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Inventory Beta</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <nav class="navbar navbar-defaul" role="navigation">
+      <div class="container">
+        <%= link_to "Aqui pongo un logo o algo", '#', id: "logo" %>
+        <nav>
+          <ul class="nav nav-tabs">
+            <li><%= link_to "Clientes",   clientes_path %></li>
+            <li><%= link_to "Inventario",   inventarios_path %></li>
+            <li><%= link_to "Equipo", equipos_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+</body>
+</html>

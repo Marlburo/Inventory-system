@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @equipo.modelo %>
+</p>
+
+<p>
+  <strong>Fabricante:</strong>
+  <%= @equipo.fabricante %>
+</p>
+
+<p>
+  <strong>Funcion:</strong>
+  <%= @equipo.funcion %>
+</p>
+
+<%= link_to 'Edit', edit_equipo_path(@equipo) %> |
+<%= link_to 'Back', equipos_path %>
